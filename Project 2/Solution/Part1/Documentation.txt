@@ -1,0 +1,15 @@
+
+a. n/a
+
+b.
+We achieve timing by checking the clock at multiple points, with clock_t and clock(), and finding the CPU time used by dividing by 
+clock cycles per second.
+We tested it with fast processes with and without sleep(3); in them.
+
+If you try to stop a process that has already been stopped, it will not be stopped a second time.
+In terms of the signal that send to the already stopped process, it should not crash the program.
+
+
+
+c. ii.
+SIGKILL and SIGSTOP cannot be caught, but the other signals can be caught.
